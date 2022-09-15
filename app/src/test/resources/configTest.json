@@ -1,0 +1,6 @@
+{
+  "host": "127.0.0.1",
+  "port": 7000,
+  "db_url": "jdbc:sqlite:C:\\Users\\ritik\\sqliteDB\\mydatabase.db",
+  "log_file": "C:\\Users\\ritik\\CS305\\midsem\\app\\src\\main\\resources\\msg_router.log"
+}
