@@ -28,18 +28,27 @@ To run App.java, execute
 App.Java uses a main() function to run the function of MessageRouterService.
 Important points while running the program:
 Change the path of the config.json file passed to MessageRouterService from the main() function of App.java
-    (i) The sender program sends a requests to the "/" end-point.
-    (ii) The acknowledgement is passed in terms of status code of the POST request made by MessageRouterService to the receiver.
-    (iii) The names of the tables are stored in the variables routingTableName and messageLogsTableName of the DatabaseHandler class. Make sure to make appropriate changes as per the names of these tables in your database.
-    (iv) Change the config.json file as per your parameters.
-    (v) The sqlite commands used to create the tables in this implementation can be found in the file databaseCommands.sql
-    (vi) The payload is passed as text(or XML) along with the POST request.
+
+(i) The sender program sends a requests to the "/" end-point.
+
+(ii) The acknowledgement is passed in terms of status code of the POST request made by MessageRouterService to the receiver.
+
+(iii) The names of the tables are stored in the variables routingTableName and messageLogsTableName of the DatabaseHandler class. Make sure to make appropriate changes as per the names of these tables in your database.
+
+(iv) Change the config.json file as per your parameters.
+
+(v) The sqlite commands used to create the tables in this implementation can be found in the file databaseCommands.sql
+
+(vi) The payload is passed as text(or XML) along with the POST request.
 
 
-To run the tests, you have to make certain changes
-    (i) Change the directory variable in JSONFileParserTest.java by the location of the project folder in your system.
-    (ii) Change the dbURL in DatabaseHandlerTest.java, with the URL of your database.
-    (iii) For the success of the function destinationFinder(), make sure the corresponding entry is present in the routing_table of your database.
+To run the tests, you have to make certain changes:
+
+(i) Change the directory variable in JSONFileParserTest.java by the location of the project folder in your system.
+
+(ii) Change the dbURL in DatabaseHandlerTest.java, with the URL of your database.
+
+(iii) For the success of the function destinationFinder(), make sure the corresponding entry is present in the routing_table of your database.
 
 Finally, execute the following command:
 `./gradlew test`
